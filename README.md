@@ -31,6 +31,10 @@ curl -fsSL https://raw.githubusercontent.com/thariman/myccstatusline/main/instal
 
 Start a new Claude Code session to see it. `install.sh` writes the layout + widget scripts to `~/.config/ccstatusline/` and points Claude Code's `statusLine` at `bunx ccstatusline`.
 
+## Platforms
+
+Tested on **Linux** and **macOS**. The custom widgets read the OAuth token cross-platform: from `~/.claude/.credentials.json` on Linux, and from the login **Keychain** (`Claude Code-credentials`) on macOS — the first read triggers a one-time prompt, click **Always Allow**. On macOS the widgets only work in the desktop Claude Code session (the login keychain is locked over SSH).
+
 ## Files
 
 | File | What |

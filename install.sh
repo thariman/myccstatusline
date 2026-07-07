@@ -21,7 +21,7 @@ cat > "$CFG/settings.json" <<CCSL_SETTINGS
       { "id": "l1-branch", "type": "git-branch", "color": "gray" }
     ],
     [
-      { "id": "l2-label", "type": "custom-text", "color": "white", "customText": "curr" },
+      { "id": "l2-label", "type": "custom-text", "color": "white", "customText": "curr " },
       { "id": "l2-bar", "type": "session-usage", "color": "green", "rawValue": true,
         "metadata": { "display": "progress-short" } },
       { "id": "l2-reset-icon", "type": "custom-text", "color": "green", "customText": "⟳" },
@@ -33,16 +33,16 @@ cat > "$CFG/settings.json" <<CCSL_SETTINGS
         "commandPath": "$HOME/.config/ccstatusline/credits.sh", "timeout": 900 }
     ],
     [
-      { "id": "l3-label", "type": "custom-text", "color": "white", "customText": "fable  " },
+      { "id": "l3-label", "type": "custom-text", "color": "white", "customText": "fable" },
       { "id": "l3-bar", "type": "custom-command", "color": "green", "rawValue": true,
         "commandPath": "$HOME/.config/ccstatusline/fable-weekly.sh", "timeout": 900 },
+      { "id": "l3-reset-icon", "type": "custom-text", "color": "green", "customText": "⟳" },
+      { "id": "l3-reset", "type": "weekly-reset-timer", "color": "green", "rawValue": true,
+        "metadata": { "display": "time" } },
       { "id": "l3-sep1", "type": "separator", "color": "gray", "character": " | " },
       { "id": "l3-label2", "type": "custom-text", "color": "white", "customText": "wkly " },
       { "id": "l3-bar2", "type": "weekly-usage", "color": "green", "rawValue": true,
-        "metadata": { "display": "progress-short" } },
-      { "id": "l3-reset-icon", "type": "custom-text", "color": "green", "customText": "⟳" },
-      { "id": "l3-reset", "type": "weekly-reset-timer", "color": "green", "rawValue": true,
-        "metadata": { "display": "time" } }
+        "metadata": { "display": "progress-short" } }
     ]
   ],
   "flexMode": "full-minus-40",

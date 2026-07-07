@@ -4,8 +4,8 @@ My [ccstatusline](https://www.npmjs.com/package/ccstatusline) setup for Claude C
 
 ```
 opus 4.8 | 42% | ~/projects/myccstatusline main
-curr [█████░░░░░░░░░░░] 10% ⟳ 4h32m | crdts [█████████░░░░░░░] 56%
-fable  [██░░░░░░░░░░░░░░] 14% | wkly [██████░░░░░░░░░░] 40% ⟳ 5d18h
+curr  [█████░░░░░░░░░░░] 10% ⟳ 4h32m | crdts [█████████░░░░░░░] 56%
+fable [██░░░░░░░░░░░░░░] 14% ⟳ 5d18h | wkly [██████░░░░░░░░░░] 40%
 ```
 
 - **curr** — 5-hour session usage + reset timer (built-in `session-usage`)

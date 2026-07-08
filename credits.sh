@@ -1,11 +1,13 @@
 #!/bin/bash
 # Usage-credits (extra_usage) % for ccstatusline custom-command widget.
 # ponytail: prints from cache instantly (widget timeout is 1s); refreshes in background every 60s
-CACHE="$HOME/.cache/ccstatusline/credits"
+# follows the active Claude account: uses $CLAUDE_CONFIG_DIR (set per account) and falls back to ~/.claude
+CFG="${CLAUDE_CONFIG_DIR:-$HOME/.claude}"
+CACHE="$HOME/.cache/ccstatusline/credits-$(basename "$CFG")"
 
 # token: Linux reads the credentials file; macOS reads the login keychain (one-time "Always Allow").
 get_token() {
-    local f="$HOME/.claude/.credentials.json" j
+    local f="$CFG/.credentials.json" j
     if [ -f "$f" ]; then j=$(cat "$f")
     else j=$(security find-generic-password -s "Claude Code-credentials" -w 2>/dev/null) || return 1; fi
     printf '%s' "$j" | python3 -c "import json,sys;print(json.load(sys.stdin)['claudeAiOauth']['accessToken'])" 2>/dev/null
